@@ -1,3 +1,8 @@
+import path from 'path';
+
+// 获取当前模块路径
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
