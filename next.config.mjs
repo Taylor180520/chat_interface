@@ -9,6 +9,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  webpack(config) {
+    // 添加路径别名配置
+    config.resolve.alias['@'] = path.resolve(__dirname);
+    return config;
+  },
 }
 
-export default nextConfig
+export default nextConfig;
